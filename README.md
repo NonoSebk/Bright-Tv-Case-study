@@ -5,6 +5,8 @@ Bright TV Dashboard Case Study
 This case study focuses on analyzing the **Bright TV dataset** by developing an interactive dashboard using **Google Looker Studio (Data Studio)**. The purpose of the dashboard is to provide meaningful insights into TV viewership by examining viewer behaviour, channel performance, peak viewing times, and audience demographics. The dashboard enables stakeholders to make informed decisions by presenting data through interactive visualizations and key performance indicators (KPIs). To ensure consistency, the same visualizations were also recreated in **Microsoft Excel** using Pivot Tables, Pivot Charts, KPI cards, and slicers.
 
 Planning done on Miro: https://miro.com/app/board/uXjVHE4Vv9Q=/?share_link_id=979323851307
+<img width="1572" height="865" alt="image" src="https://github.com/user-attachments/assets/fdf81914-b620-4caf-b59c-d447d1e6c155" />
+
 ---
 
 ## 2. How the Case Study Was Completed and Insights Found
@@ -58,8 +60,9 @@ ALL LINKS
 
 
 * Databricks link:https://dbc-dca8249f-ed09.cloud.databricks.com/dashboardsv3/01f16ca14f9d189f9eb3914d6bd04fbf/published?o=7474656124792699
-* lovable: https://lovable.dev/projects/1f2da8fc-e022-4e4d-9ad4-f97871bf5c7fvable link: 
 * <img width="1882" height="930" alt="image" src="https://github.com/user-attachments/assets/571e3688-4b42-45c6-a8e6-d13ae269d8ba" />
+* lovable: https://lovable.dev/projects/1f2da8fc-e022-4e4d-9ad4-f97871bf5c7fvable link:
+* <img width="1801" height="836" alt="image" src="https://github.com/user-attachments/assets/69974243-026d-4287-9eae-61e6ee17080f" />
 * DataStudio: https://datastudio.google.com/s/kcDAlinTtWE
 * Canva Link: https://canva.link/g5h08ex0mf0dj0y
 
