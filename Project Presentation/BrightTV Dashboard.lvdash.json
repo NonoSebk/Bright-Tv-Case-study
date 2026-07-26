@@ -1,0 +1,1185 @@
+{
+  "datasets": [
+    {
+      "name": "brighttv_data",
+      "displayName": "BrightTV Viewer Data",
+      "queryLines": [
+        "SELECT\n",
+        "  CAST(\n",
+        "    split(\n",
+        "      `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "      ';'\n",
+        "    )[0] AS BIGINT\n",
+        "  ) AS subs,\n",
+        "  CAST(\n",
+        "    split(\n",
+        "      `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "      ';'\n",
+        "    )[1] AS INT\n",
+        "  ) AS month_id,\n",
+        "  CAST(\n",
+        "    split(\n",
+        "      `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "      ';'\n",
+        "    )[2] AS DATE\n",
+        "  ) AS watch_date,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[3] AS day_name,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[4] AS day_classification,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[5] AS month_name,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[6] AS tv_channel,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[7] AS watch_time,\n",
+        "  CAST(\n",
+        "    split(\n",
+        "      `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "      ';'\n",
+        "    )[8] AS INT\n",
+        "  ) AS hour_of_day,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[9] AS time_of_day,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[10] AS screen_time_bucket,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[11] AS duration,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[12] AS province,\n",
+        "  CAST(\n",
+        "    split(\n",
+        "      `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "      ';'\n",
+        "    )[13] AS INT\n",
+        "  ) AS age,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[14] AS email,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[15] AS social_media_handle,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[16] AS race,\n",
+        "  split(\n",
+        "    `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`,\n",
+        "    ';'\n",
+        "  )[17] AS gender\n",
+        "FROM\n",
+        "  workspace.default.brighttv_viewer_data\n",
+        "WHERE\n",
+        "  `subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender`\n",
+        "    != 'subs;month_id;watch_date;day_name;day_classification;month_name;Tv_channel;watch_time;hour_of_day;time_of_day;screen_time_bucket;duration;Province;Age;Email;Social Media Handle;Race;Gender'"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "3157ea47",
+      "displayName": "Bright Tv Dashboard",
+      "layout": [
+        {
+          "widget": {
+            "name": "total_watch_hours",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Total Watch Hours",
+                "showTitle": true
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 0,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "avg_age",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "avg(age)",
+                      "expression": "AVG(`age`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Average Viewer Age",
+                "showTitle": true
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg(age)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "none",
+                    "decimalPlaces": {
+                      "type": "exact",
+                      "places": 1
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "total_sessions",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Total Sessions",
+                "showTitle": true
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 9,
+            "y": 0,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_channel",
+            "queries": [
+              {
+                "name": "dashboards/01f16ca14f9d189f9eb3914d6bd04fbf/datasets/01f17bcd10d71ceaa96d310f479495f1_tv_channel",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "tv_channel",
+                      "expression": "`tv_channel`"
+                    },
+                    {
+                      "name": "tv_channel_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "scale": {
+                "type": "categorical",
+                "sort": {
+                  "by": "natural-order"
+                }
+              },
+              "frame": {
+                "title": "Channel Filter",
+                "showTitle": true
+              },
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "tv_channel",
+                    "queryName": "dashboards/01f16ca14f9d189f9eb3914d6bd04fbf/datasets/01f17bcd10d71ceaa96d310f479495f1_tv_channel"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 3,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_province",
+            "queries": [
+              {
+                "name": "dashboards/01f16ca14f9d189f9eb3914d6bd04fbf/datasets/01f17bcd10d71ceaa96d310f479495f1_province",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "province",
+                      "expression": "`province`"
+                    },
+                    {
+                      "name": "province_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "scale": {
+                "type": "categorical",
+                "sort": {
+                  "by": "natural-order"
+                }
+              },
+              "frame": {
+                "title": "Province Filter",
+                "showTitle": true
+              },
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "province",
+                    "queryName": "dashboards/01f16ca14f9d189f9eb3914d6bd04fbf/datasets/01f17bcd10d71ceaa96d310f479495f1_province"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 7,
+            "width": 3,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_gender",
+            "queries": [
+              {
+                "name": "dashboards/01f16ca14f9d189f9eb3914d6bd04fbf/datasets/01f17bcd10d71ceaa96d310f479495f1_gender",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "gender",
+                      "expression": "`gender`"
+                    },
+                    {
+                      "name": "gender_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "scale": {
+                "type": "categorical",
+                "sort": {
+                  "by": "natural-order"
+                }
+              },
+              "frame": {
+                "title": "Gender Filter",
+                "showTitle": true
+              },
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "gender",
+                    "queryName": "dashboards/01f16ca14f9d189f9eb3914d6bd04fbf/datasets/01f17bcd10d71ceaa96d310f479495f1_gender"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 11,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "viewing_by_day",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "day_name",
+                      "expression": "`day_name`"
+                    },
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Viewing by Day of Week",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "day_name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "count(*)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 3,
+            "width": 4,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "viewing_by_hour",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "hour_of_day",
+                      "expression": "`hour_of_day`"
+                    },
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Viewing by Hour of Day",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "hour_of_day",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "count(*)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 7,
+            "y": 3,
+            "width": 5,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "top_channels",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "countdistinct(subs)",
+                      "expression": "COUNT(DISTINCT `subs`)"
+                    },
+                    {
+                      "name": "tv_channel",
+                      "expression": "`tv_channel`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Top 10 Channels",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  "#28FFC6",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "countdistinct(subs)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "tv_channel",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 8,
+            "width": 4,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "gender_pie",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    },
+                    {
+                      "name": "gender",
+                      "expression": "`gender`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Gender Distribution",
+                "showTitle": true
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "count(*)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "gender",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 7,
+            "y": 8,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "race_pie",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    },
+                    {
+                      "name": "race",
+                      "expression": "`race`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Race Distribution",
+                "showTitle": true
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "count(*)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "race",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 10,
+            "y": 8,
+            "width": 2,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "time_bucket_dist",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    },
+                    {
+                      "name": "screen_time_bucket",
+                      "expression": "`screen_time_bucket`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Screen Time Buckets",
+                "showTitle": true
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "count(*)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "screen_time_bucket",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 14,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "time_of_day_dist",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    },
+                    {
+                      "name": "time_of_day",
+                      "expression": "`time_of_day`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Time of Day Distribution",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "count(*)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "time_of_day",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 14,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "monday_alert",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Monday Engagement Dip\n",
+                "\n",
+                "**Key Finding:** Monday shows the lowest engagement (973 sessions) compared to weekend peaks (Saturday: 1,655 sessions). This represents a 41% drop from weekend averages.\n",
+                "\n",
+                "**Action Required:** Review Monday programming strategy and consider scheduling high-value content or promotions to boost engagement."
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 19,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "key_drivers",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Primary Drivers\n",
+                "\n",
+                "### 1. **Live Events (1,247 unique viewers)**\n",
+                "* Highest engagement channel\n",
+                "* Strong community viewing patterns\n",
+                "\n",
+                "### 2. **Cricket World Cup (1,054 unique viewers)**\n",
+                "* Sports content drives sustained engagement\n",
+                "* Peak viewership during live matches\n",
+                "\n",
+                "### 3. **SuperSport & Entertainment Mix**\n",
+                "* Trace TV and Channel O combined: 1,463 unique viewers\n",
+                "* Music content performs well with target demographic\n",
+                "\n",
+                "### 4. **Prime Time Window (14:00-18:00)**\n",
+                "* 2,544 sessions across this 4-hour block\n",
+                "* Represents 25% of total daily viewership"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 21,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "recommendations",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Immediate Actions\n",
+                "\n",
+                "### Content Strategy\n",
+                "1. **Expand Live Events Coverage**\n",
+                "   * Increase live sports and event programming\n",
+                "   * Partner with more event organizers\n",
+                "\n",
+                "2. **Monday Boost Campaign**\n",
+                "   * Launch \"Monday Motivator\" content series\n",
+                "   * Offer exclusive Monday premiere content\n",
+                "   * Consider Monday-specific promotions\n",
+                "\n",
+                "### Engagement Optimization\n",
+                "3. **Prime Time Optimization (14:00-18:00)**\n",
+                "   * Schedule premium content during peak hours\n",
+                "   * Increase ad inventory pricing\n",
+                "   * Test personalized recommendations\n",
+                "\n",
+                "4. **Weekend Retention**\n",
+                "   * Maintain Saturday/Friday momentum\n",
+                "   * Create weekend viewing habits\n",
+                "   * Social media campaigns around weekend programming"
+              ]
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 21,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "initiatives",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Strategic Initiatives Timeline\n",
+                "\n",
+                "### Q3 2026 (Jul-Sep)\n",
+                "* **July:** Launch Monday engagement campaign\n",
+                "* **August:** Expand live events partnership portfolio\n",
+                "* **September:** Implement prime-time content optimization\n",
+                "\n",
+                "### Q4 2026 (Oct-Dec)\n",
+                "* **October:** Roll out personalized recommendation engine\n",
+                "* **November:** Launch weekend retention program\n",
+                "* **December:** Holiday special content series\n",
+                "\n",
+                "---\n",
+                "\n",
+                "### Success Metrics\n",
+                "* **Monday Sessions:** Target 40% increase (973 → 1,362)\n",
+                "* **Live Events Engagement:** Target 25% growth\n",
+                "* **Prime Time Revenue:** Target 30% increase in ad revenue\n",
+                "* **Weekend Retention:** Maintain 95%+ of current levels"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 27,
+            "width": 12,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "executive_summary",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## BrightTV CVM Dashboard - Executive Summary\n",
+                "\n",
+                "### Overview\n",
+                "* **Total Viewers:** 4,386 unique subscribers\n",
+                "* **Total Sessions:** 9,995 viewing sessions\n",
+                "* **Average Age:** 32.2 years\n",
+                "* **Geographic Reach:** Multiple provinces with strong Gauteng and Eastern Cape presence\n",
+                "\n",
+                "### Key Insights\n",
+                "\n",
+                "#### Strengths\n",
+                "1. **Strong Weekend Performance:** Saturday and Friday show peak engagement (1,655 and 1,640 sessions)\n",
+                "2. **Live Events Dominance:** Live Events and Cricket World Cup channels drive the highest unique viewership\n",
+                "3. **Prime Time Success:** Afternoon/early evening (14:00-18:00) shows consistent high engagement\n",
+                "4. **Diverse Content Mix:** Entertainment, sports, and kids content all performing well\n",
+                "\n",
+                "#### Opportunities\n",
+                "1. **Monday Underperformance:** Significant drop in engagement requires immediate attention\n",
+                "2. **Late Night/Early Morning:** Minimal viewing during 0:00-6:00 hours\n",
+                "3. **Content Gaps:** Certain demographics and time slots show untapped potential\n",
+                "\n",
+                "### Strategic Priority\n",
+                "**Focus on Monday activation and prime-time revenue optimization while maintaining weekend momentum.**"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 33,
+            "width": 12,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "t1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "brighttv_data",
+                  "fields": [
+                    {
+                      "name": "count(subs)",
+                      "expression": "COUNT(`subs`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "showDescription": false,
+                "title": "Total Subscribers"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(subs)"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 3,
+            "height": 3
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "canvasBackgroundColor": {
+        "light": "#1a1537",
+        "dark": "#1a1537"
+      },
+      "widgetBackgroundColor": {
+        "light": "#2d2654",
+        "dark": "#2d2654"
+      },
+      "widgetBorderColor": {
+        "light": "#4a3f7a",
+        "dark": "#4a3f7a"
+      },
+      "fontColor": {
+        "light": "#e8e6f0",
+        "dark": "#e8e6f0"
+      },
+      "visualizationColors": [
+        "#7c4dff",
+        "#536dfe",
+        "#00bcd4",
+        "#26a69a",
+        "#66bb6a",
+        "#ffca28",
+        "#ff7043",
+        "#ec407a"
+      ],
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED",
+      "fontFamily": "Inter",
+      "widgetPadding": 16,
+      "widgetMargin": 8,
+      "widgetCornerRadius": 12,
+      "widgetShadow": 20,
+      "gridLineColor": {
+        "light": "#4a3f7a",
+        "dark": "#4a3f7a"
+      },
+      "axisLineColor": {
+        "light": "#6b5ca5",
+        "dark": "#6b5ca5"
+      }
+    },
+    "genieSpace": {
+      "isEnabled": false,
+      "enablementMode": "DISABLED"
+    },
+    "applyModeEnabled": false
+  }
+}
